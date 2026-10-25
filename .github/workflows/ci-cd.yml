@@ -12,7 +12,7 @@ on:
 
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID || 'team_oe8wCnyOzNEJTYsKnhymFARe' }}
-  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID || 'prj_rhXP6AHi4UBDlvGJ5zLZIgWf5W07' }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID || 'prj_EqITiK40kyJvH9dopWPNUsS3YTwf' }}
 
 jobs:
   lint-and-typecheck:

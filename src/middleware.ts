@@ -1,13 +1,15 @@
-// middleware.ts
 import { withAuth } from "@kinde-oss/kinde-auth-nextjs/middleware";
+import { NextRequest } from "next/server";
 
-export default withAuth(
-  async function middleware() {
-    return null;
-  },
-  {
-    publicRoutes: [],
-    unauthorizedRedirectUrl: "/",
-    unauthorizedErrorMessage: "You must be logged in to access this page.",
-  }
-);
+export default function middleware(req: NextRequest) {
+  return withAuth(req, {
+    redirectURLBase: req.nextUrl.origin,
+    isReturnToCurrentPage: true,
+  });
+}
+
+export const config = {
+  matcher: [
+    "/((?!api/auth|_next/static|_next/image|favicon.ico).*)",
+  ],
+};

@@ -21,7 +21,7 @@ export const ImageUpload = ({ value, onChange, disabled }: ImageUploadProps) => 
         return null;
 
     return (
-        <div className="space-y-4 w-full flex flex-col justify-center items-center">
+        <div className={`space-y-4 w-full flex flex-col justify-center items-center ${disabled ? "pointer-events-none opacity-50" : ""}`}>
             <CldUploadButton
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 onSuccess={(result: any) => onChange(result.info.secure_url)}

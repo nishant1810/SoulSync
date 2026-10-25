@@ -3,7 +3,6 @@
 import { Companion } from "@prisma/client";
 import { ComponentRef, useEffect, useRef, useState } from "react";
 import { ChatMessage, ChatMessageProps } from "./chat-message";
-import { UserAvatar } from "./user-avatar";
 
 export interface ChatMessagesProps {
     messages: ChatMessageProps[];

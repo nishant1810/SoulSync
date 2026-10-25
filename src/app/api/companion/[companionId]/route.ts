@@ -64,13 +64,13 @@ export async function DELETE(req: Request,
         }
 
         const { companionId } = await params;
-
-        const companion = await prismadb.companion.delete({
+ 
+        await prismadb.companion.delete({
             where: {
                 userId,
                 id: companionId
             }
-        })
+        });
 
         return NextResponse.json({ message: "Companion deleted successfully" });
     } catch (error) {

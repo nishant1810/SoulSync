@@ -58,7 +58,7 @@ export const ChatClient = ({ companion }: ChatClientProps) => {
             };
 
             setMessages((current) => [...current, botMessage]);
-        } catch (error) {
+        } catch {
             // console.error("Error fetching Gemini response:", error);
             toast.error("⚠️ Sorry, something went wrong. Please try again.");
             

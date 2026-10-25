@@ -1,6 +1,6 @@
 "use client";
 
-import { ChangeEvent, ChangeEventHandler, FormEvent } from "react";
+import { ChangeEvent, FormEvent } from "react";
 import { Input } from "./ui/input";
 import { SendHorizonal } from "lucide-react";
 import { Button } from "./ui/button";

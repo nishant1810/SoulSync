@@ -1,0 +1,43 @@
+services:
+  - type: web
+    name: soulsync
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: npm install && npx prisma generate && npm run build
+    startCommand: npm run start -- -p $PORT
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: DATABASE_URL
+        sync: false
+      - key: DIRECT_URL
+        sync: false
+      - key: KINDE_CLIENT_ID
+        sync: false
+      - key: KINDE_CLIENT_SECRET
+        sync: false
+      - key: KINDE_ISSUER_URL
+        sync: false
+      - key: KINDE_SITE_URL
+        sync: false
+      - key: KINDE_POST_LOGOUT_REDIRECT_URL
+        sync: false
+      - key: KINDE_POST_LOGIN_REDIRECT_URL
+        sync: false
+      - key: NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
+        sync: false
+      - key: NEXT_PUBLIC_CLOUDINARY_API_KEY
+        sync: false
+      - key: CLOUDINARY_API_SECRET
+        sync: false
+      - key: NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: UPSTASH_REDIS_REST_URL
+        sync: false
+      - key: UPSTASH_REDIS_REST_TOKEN
+        sync: false
+      - key: DEFAULT_USER_ID
+        sync: false
